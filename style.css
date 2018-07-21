@@ -1,0 +1,13 @@
+.name{
+  color: #162955;
+  border-bottom: black 10px;
+  transition: .9s;
+}
+
+.jumbotron {
+  background-color: #E5E5E6;
+}
+.carousel-inner img {
+    width: 100%;
+    height: 100%;
+}
