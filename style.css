@@ -1,3 +1,12 @@
+.carousel-inner > .item > img{
+   position: absolute;
+   margin: 0 auto;
+ }
+ .carousel{
+   position: absolute;
+   align-self: center;
+ }
+
 .name{
   color: #162955;
   border-bottom: solid rgba(0,0,0,0);
@@ -10,18 +19,41 @@
 .jumbotron {
   background-image: url("/images/me.jpg");
 }
-.navbar-toggler::after{
-  opacity: 0;
+
+.navbar{
+  background-color:transparent !important;
+  border-color: transparent;
+  background-image: none;
+  box-shadow:none;
 }
+.navbar-light .navbar-toggler{
+  border-color: transparent;
+}
+.navbar-light .navbar-toggler:focus{
+  transform: rotate(90deg);
+}
+#navbar-collapse:focus{
+  transform:rotate(-90deg);
+}
+.navbar-light .navbar-toggler::after{
+  transform: rotate(180deg);
+}
+.navbar-collapse:focus{
+  transform: rotate(-90deg);
+}
+
+
 
 @keyframes slideInFromTop{
   0% {
     opacity: 0;
-    transform: translateY(-100%);
+    transform: translateX(-100%);
+
   }
   100% {
     opacity: 1;
-    transform: translateY(0);
+    transform: translateX(0);
+
   }
 
 }
