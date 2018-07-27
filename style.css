@@ -8,18 +8,26 @@
  }
 
 .name{
-  color: #162955;
-  border-bottom: solid rgba(0,0,0,0);
+  color: #282F1F;
+  background-color: #669DD7A0;
   transition: border-bottom 1s;
 }
 
-.body{
-  position: relative;
-}
-.jumbotron {
-  background-image: url("/images/me.jpg");
-}
 
+
+.parallax{
+  background: url('images/mpls.jpg') fixed;
+  min-height: 500px;
+  object-fit: contain;
+  background-attachment: fixed;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  z-index:-1;
+}
+.jumbotron{
+  background: transparent;
+}
 .navbar{
   background-color:transparent !important;
   border-color: transparent;
@@ -28,19 +36,95 @@
 }
 .navbar-light .navbar-toggler{
   border-color: transparent;
+
 }
-.navbar-light .navbar-toggler:focus{
-  transform: rotate(90deg);
+
+.about{
+  display:none;
+  bottom:0;
+  width:100%;
+  z-index: 1;
 }
-#navbar-collapse:focus{
-  transform:rotate(-90deg);
+#nav-icon3{
+  width: 30px;
+  height: 20px;
+  position: relative;
+  -webkit-transform: rotate(0deg);
+  -moz-transform: rotate(0deg);
+  -o-transform: rotate(0deg);
+  transform: rotate(0deg);
+  -webkit-transition: .5s ease-in-out;
+  -moz-transition: .5s ease-in-out;
+  -o-transition: .5s ease-in-out;
+  transition: .5s ease-in-out;
+  cursor: pointer;
 }
-.navbar-light .navbar-toggler::after{
-  transform: rotate(180deg);
+
+
+#nav-icon3 span{
+
+  left: -10px;
+  display: block;
+  position: absolute;
+  height: 5px;
+  width: 100%;
+  background: #162955;
+  opacity: 1;
+  -webkit-transform: rotate(0deg);
+  -moz-transform: rotate(0deg);
+  -o-transform: rotate(0deg);
+  transform: rotate(0deg);
+  -webkit-transition: .25s ease-in-out;
+  -moz-transition: .25s ease-in-out;
+  -o-transition: .25s ease-in-out;
+  transition: .25s ease-in-out;
 }
-.navbar-collapse:focus{
-  transform: rotate(-90deg);
+#nav-icon3:hover span{
+  background-color: #669DD7;
+
 }
+
+#nav-icon3 span:nth-child(1) {
+  top: 0px;
+}
+
+#nav-icon3 span:nth-child(2),#nav-icon3 span:nth-child(3) {
+  top: 9px;
+}
+
+#nav-icon3 span:nth-child(4) {
+  top: 18px;
+}
+
+#nav-icon3.open span:nth-child(1) {
+  top: 0px;
+  width: 0%;
+  left: 50%;
+}
+
+#nav-icon3.open span:nth-child(2) {
+  -webkit-transform: rotate(45deg);
+  -moz-transform: rotate(45deg);
+  -o-transform: rotate(45deg);
+  transform: rotate(45deg);
+}
+
+#nav-icon3.open span:nth-child(3) {
+  -webkit-transform: rotate(-45deg);
+  -moz-transform: rotate(-45deg);
+  -o-transform: rotate(-45deg);
+  transform: rotate(-45deg);
+}
+
+#nav-icon3.open span:nth-child(4) {
+  top: 18px;
+  width: 0%;
+  left: 50%;
+}
+button:focus {outline:0;}
+
+
+
 
 
 

@@ -14,46 +14,60 @@
 
 <body data-spy = "scroll" data-target = ".navbar" data-offest = "50">
   <nav class="navbar navbar-expand-lg navbar-light bg-light fixed-top">
-    <button id = "nav-icon3" class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-      <span class="navbar-toggler-icon"></span>
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="sr-only">Toggle Nav</span>
+      <div id="nav-icon3">
+        <span></span>
+        <span></span>
+        <span></span>
+        <span></span>
+      </div>
     </button>
       <div class = "collapse navbar-collapse" id = "navbarSupportedContent">
         <ul class="nav navbar-nav">
           <li class="nav-item">
-            <a class="nav-link" href="#about">About Me</a>
+            <a style = "margin-bottom: -20px" class="nav-link" href="#about">About Me</a>
           </li>
           <li class="nav-item">
-            <a class="nav-link" href="#education">Education</a>
+            <a style = "margin-bottom: -20px" class="nav-link" href="#education">Education</a>
           </li>
           <li class="nav-item">
-            <a class="nav-link" href="#work">Work Experience</a>
+            <a style = "margin-bottom: -20px" class="nav-link" href="#work">Work Experience</a>
           </li>
           <li class="nav-item">
-            <a class="nav-link" href="#projects">Projects</a>
+            <a style = "margin-bottom: -20px" class="nav-link" href="#projects">Projects</a>
           </li>
           <li class="nav-item">
-            <a class="nav-link" href="#contact">Contact Me</a>
+            <a style = "margin-bottom: -20px" class="nav-link" href="#contact">Contact Me</a>
           </li>
         </ul>
       </div>
 
   </nav>
-  <div class = "jumbotron text-center jumbotron-fluid">
-    <div class = "container-fluid" style = "padding-top:100px;padding-bottom:100px">
+  <div class = "parallax">
+    <div id = "mainHead" class = "jumbotron text-center jumbotron-fluid">
+        <div class = "container-fluid" style = "padding-right: 20px; padding-top:100px;padding-bottom:100px">
+          <div class = "name" >
+            <h1 id = "name" class = "display-2">  </h1>
+            <p> <strong id = "subname" style = "color:#642717">  </strong></p>
+          </div>
 
-      <div class = "name" >
-        <h1 id = "name" class = "display-2">  </h1>
       </div>
-      <p style = "color:#B5A700; padding-top: 50px"> <strong id = "subname">  </strong></p>
     </div>
-
   </div>
 
-  <div id = "about" class = "container-fluid bg-success" style = "margin-top: -40px;padding-top:70px; padding-bottom:70px">
+
+  <div id = "about" class = "container" style = "height: 234px; margin-top: -30px;">
     <div class = "row">
-      <div class = "about">
-        <h1 class = "display-3"><a name = "about"> ABOUT </a></h1>
+      <div class = "col">
+        <div class = "about" >
+          <h3><a name = "about"> Hi My Name is Ansel! I am a passionate computer science student at the University
+                                of Minnesota. I have a drive for all things technology</a></h1>
+        </div>
       </div>
+      <!-- <div class = "col-4">
+        <h1 class = "display-3">ABOUT</h1>
+      </div> -->
     </div>
   </div>
   <div id = "education" class = "container-fluid bg-warning" style = "padding-top:70px; padding-bottom:70px">
@@ -123,7 +137,7 @@
     </div>
   </div>
 
-  <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+  <script src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>
   <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.2/js/bootstrap.min.js" integrity="sha384-o+RDsa0aLu++PJvFqy8fFScvbHFLtbvScb8AjopnFD+iEQ7wo/CG0xlczd+2O/em" crossorigin="anonymous"></script>
   <script> $('body').scrollspy({target:'#navbarSupportedContent',offset:108})</script>
@@ -145,6 +159,22 @@
       });
       $(function () {
         showText("#subname", "Computer Science Student | University of Minnesota", 0, 50);
+      });
+      $(document).ready(function(){
+      	$('#nav-icon3').click(function(){
+      		$(this).toggleClass('open');
+      	});
+      });
+      $(document).scroll(function () {
+          var y = $(this).scrollTop();
+          var elmnt = document.getElementById("mainHead");
+          console.log(elmnt.offsetHeight);
+          var top = elmnt.offsetHeight/3;
+          if (y > top) {
+            $('.about').fadeIn();
+          } else {
+            $('.about').fadeOut();
+          }
       });
 
 
