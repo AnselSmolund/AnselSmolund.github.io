@@ -1,9 +1,13 @@
 
 .parallax{
-  background: url('images/mpls.jpg') fixed;
+  /* background-color: #2E4172; */
+  background-image : linear-gradient(to top,
+                  #2E417200 0%,
+                  #2E4172FF 40%);
+  /* background-image: url("images/ansel.jpeg"); */
   min-height: 500px;
   object-fit: contain;
-  background-attachment: fixed;
+  /* background-attachment: fixed; */
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
@@ -18,11 +22,12 @@
   top:0;
   position: relative;
   width: 100vw;
+  top: 200px;
   max-width: 100%;
   transition: border-bottom 1s;
 }
 .typed{
-  color: green;
+  color: #88CC88;
   text-decoration: underline;
 
 }
@@ -87,18 +92,31 @@
 
 
 .navbar{
-  background-color:transparent !important;
-  border-color: transparent;
+  /* background-color:transparent !important; */
+  color: #2E4172 !important;
+  border-color: #2E4172;
+  background-color: #2E4172 !important;
   background-image: none;
   box-shadow:none;
 }
 .navbar-light .navbar-toggler{
   border-color: transparent;
 
+
+}
+
+.about-holder{
+  background-color: white;
+  object-fit: contain;
+  background-attachment: fixed;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
 }
 
 .about{
   display:none;
+  color:black;
   bottom:0;
   width:100%;
   z-index: 1;
@@ -126,7 +144,7 @@
   position: absolute;
   height: 5px;
   width: 100%;
-  background: #162955;
+  background: white;
   opacity: 1;
   -webkit-transform: rotate(0deg);
   -moz-transform: rotate(0deg);
@@ -138,7 +156,8 @@
   transition: .25s ease-in-out;
 }
 #nav-icon3:hover span{
-  background-color: #669DD7;
+  transform: rotate(-180deg);
+
 
 }
 
@@ -205,6 +224,18 @@ button:focus {outline:0;}
   }
 
 }
+@keyframes slideInFromLeft{
+  0% {
+    opacity: 0;
+    transform: translateX(0);
+  }
+  100% {
+    opacity: 1;
+    transform: translateX(100%);
+  }
+
+}
+
 .name{
   animation: .5s ease-out 0s 1 slideInFromBottom;
 }
