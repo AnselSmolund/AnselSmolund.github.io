@@ -14,9 +14,27 @@
 
 .jumbotron{
   background: transparent;
-  font-weight: 900 !important;
+  font-weight: 900;
 }
+#name{
+  font-family: 'Roboto', sans-serif;
+  color: #9FB3FE;
+  font-weight: 900;
+  letter-spacing: 0px;
+  line-height: 80%;
+  position: relative;
+  right: -10px;
+
+}
+#name2{
+  font-family: 'Roboto', sans-serif;
+  font-weight: 900;
+  letter-spacing: -4px;
+  line-height: 80%;
+}
+
 .name{
+  font-family: 'Roboto', sans-serif;
   transform: translateY(50%);
   color: #FFFFFF;
   background-color: #FFFFFF00;
@@ -29,6 +47,13 @@
 }
 .typed{
   color: #99C24D;
+  position: relative;
+
+}
+.downbtn{
+  position: absolute;
+  bottom:0;
+  left: 50vw;
 }
 .banner {
 	display: block;
@@ -100,15 +125,13 @@
 }
 .navbar-light .navbar-toggler{
   border-color: transparent;
-
-
 }
 .navbar-brand {
   padding: 0px;
 }
+
 .navbar-brand>img {
   height: 80%;
-
   width: auto;
 }
 
@@ -117,6 +140,10 @@
                   rgba(46,65,114,.8) 0%,
                   rgba(46,65,114,.7) 100%);
 
+}
+.about-title{
+  position: relative;
+  left: 6%;
 }
 /* .parallex-about{
   background-attachment: fixed;
@@ -241,18 +268,28 @@
 }
 button:focus {outline:0;}
 
-@keyframes slideInFromTop{
+@keyframes appear {
+  0%{
+    opacity:0;
+
+  }
+  99%{
+    opacity:0;
+  }
+  100%{
+    opacity:1;
+  }
+
+}
+@keyframes slideInFromLeft{
   0% {
     opacity: 0;
     transform: translateX(-100%);
-
   }
   100% {
     opacity: 1;
     transform: translateX(0);
-
   }
-
 }
 @keyframes slideInFromBottom{
   0% {
@@ -263,22 +300,49 @@ button:focus {outline:0;}
     opacity: 1;
     transform: translateY(50%);
   }
-
 }
-@keyframes slideInFromLeft{
+@keyframes slideInFromTop{
   0% {
     opacity: 0;
-    transform: translateX(0);
+    transform: translateY(-100%);
   }
   100% {
     opacity: 1;
+    transform: translateY(0);
+  }
+}
+@keyframes slideInFromRight{
+  0% {
+    opacity: 0;
     transform: translateX(100%);
   }
-
+  100% {
+    opacity: 1;
+    transform: translateX(0);
+  }
 }
-
-.name{
-  animation: .5s ease-out 0s 1 slideInFromBottom;
+@keyframes spinIn{
+  from {
+    transform: rotate(0);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+.navbar-brand:hover{
+  animation-play-state: running;
+}
+.typed{
+  animation: .9s ease-out 0s 1 appear;
+}
+.navbar-brand{
+  animation: 2s 0s 1 spinIn;
+}
+#name{
+  animation: 1s ease-out 0s 1 slideInFromLeft;
+}
+#name2{
+  animation: 1s ease-out 0s 1 slideInFromRight;
 }
 .navbar{
   animation: .5s ease-out 0s 1 slideInFromTop;
