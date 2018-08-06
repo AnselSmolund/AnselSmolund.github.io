@@ -42,6 +42,7 @@
             <a style = "color: white;" class="nav-link" href="#contact">Contact Me</a>
           </li>
         </ul>
+
       </div>
 
   </nav>
@@ -59,21 +60,17 @@
   </div>
 
   <div class = "about-holder">
-
-    <div id = "about" class = "container" style ="height:800px; padding-top:100px;">
-      <div class = "page-header">
-        <h1 class = "about-title"> about me </h1>
-      </div>
-
+    <div id = "about" class = "container">
       <div class = "row">
-        <div class = "col-4">
+        <div class = "col-xl-4">
           <div class = "about">
-            <img class="img-responsive" src = "images/ansel2.jpg" style = "border-radius: 50%" height = "300px"></img>
+            <img class="img-responsive" src = "images/ansel2.jpg" style = "border-radius: 50%;" height = "350px"></img>
           </div>
         </div>
         <div class = "col-lg-8">
-          <div class = "about" >
-            <p><a name = "about"> Hi My Name is <strong> Ansel! </strong> I am currently a Senior at the <strong> University of Minnesota-Twin Cities </strong>
+          <div class = "about">
+            <p style = "color:white"><span style = "font-size: 40px; color: #9FB3FE"> Hi My Name is <strong> Ansel! </strong></span><br>
+            I am currently a Senior at the <strong><a href = "https://www.cs.umn.edu/" style = "color:#ffcc33"><u> University of Minnesota-Twin Cities</a></strong></u>
             studying Computer Science. <br> <br>
             I am a driven individual with a track record of being able to effectively connect with people from all types of backgrounds.
             I am currently open to opportunities to pursue my professional career in both the computer software sector, as well as the business management field.
@@ -81,9 +78,10 @@
             <br>
 
             Worked with technologies across all platforms, including front end development <strong> (JS, HTML5, CSS3, Boostrap4, p5.js) </strong> and back
-            end development (Java, C, C++, Python). </a></p>
-            <a  href="mailto:Smolu006@umn.edu">Smolu006@umn.edu </a> |
-            <a href = "resume.pdf"> Download Resume </a>
+            end development (Java, C, C++, Python).</p>
+
+            <a class = "aboutLink" href="mailto:Smolu006@umn.edu"> Email me </a> |
+            <a class = "aboutLink" href = "resume.pdf"> Download Resume </a>
           </div>
         </div>
 
@@ -99,6 +97,7 @@
       <div class = "row">
         <div class = "education">
           <h1 class = "display-3"> <a name = "education"> EDUCATION </a></h1>
+          <img class="img-responsive" src = "images/umn.png" height = "150px">
         </div>
       </div>
     </div>
@@ -141,6 +140,7 @@
   <script src = "typed.js"></script>
   <script> $('body').scrollspy({target:'#navbarSupportedContent',offset:108})</script>
   <script src = "js/smooth-scroll.js"></script>
+  <!-- <script src = "js/canvas.js"></script> -->
   <script>
     var scroll = new SmoothScroll('a[href*="#"]');
   </script>
@@ -154,17 +154,7 @@
       $(document).scroll(function () {
           var y = $(this).scrollTop();
           var elmnt = document.getElementById("mainHead");
-          var top = elmnt.offsetHeight-100;
-          if (y > top) {
-            $('.about-title').fadeIn();
-          } else {
-            $('.about-title').fadeOut();
-          }
-      });
-      $(document).scroll(function () {
-          var y = $(this).scrollTop();
-          var elmnt = document.getElementById("mainHead");
-          var top = elmnt.offsetHeight;
+          var top = elmnt.offsetHeight-200;
           if (y > top) {
             $('.about').fadeIn();
           } else {

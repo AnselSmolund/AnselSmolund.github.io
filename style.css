@@ -1,4 +1,17 @@
-
+body {
+  -webkit-user-select: none;  /* Chrome all / Safari all */
+  -moz-user-select: none;     /* Firefox all */
+  -ms-user-select: none;      /* IE 10+ */
+  user-select: none;          /* Likely future */
+}
+#canvas-wrap{
+  position: relative;
+}
+#canvas-wrap canvas{
+  position: absolute;
+  top: 0;
+  left: 0;
+}
 .main-holder{
   background-image : linear-gradient(to bottom,
                   rgba(46,65,114,1) 0%,
@@ -16,6 +29,38 @@
   background: transparent;
   font-weight: 900;
 }
+@media only screen and (min-width:800px){
+  #name{
+    font-family: 'Roboto', sans-serif;
+    color: #9FB3FE;
+    font-weight: 900;
+    letter-spacing: 0px;
+    line-height: 80%;
+    position: relative;
+    right: -10px;
+    font-size: 12vw;
+
+  }
+  #name2{
+    font-family: 'Roboto', sans-serif;
+    font-weight: 900;
+    letter-spacing: -4px;
+    line-height: 80%;
+    font-size: 15vw;
+
+  }
+  .name{
+    font-family: 'Roboto', sans-serif;
+    transform: translateY(25%);
+    color: #FFFFFF;
+    background-color: #FFFFFF00;
+    position: relative;
+    line-height: 100vh;
+    width: 100vw;
+    max-width: 100%;
+  }
+
+}
 #name{
   font-family: 'Roboto', sans-serif;
   color: #9FB3FE;
@@ -32,19 +77,19 @@
   letter-spacing: -4px;
   line-height: 80%;
 }
-
-.name{
-  font-family: 'Roboto', sans-serif;
-  transform: translateY(50%);
-  color: #FFFFFF;
-  background-color: #FFFFFF00;
-  position: relative;
-  top:50%;
-  line-height: 100vh;
-  width: 100vw;
-  max-width: 100%;
-
+@media only screen and (max-width:800px){
+  .name{
+    font-family: 'Roboto', sans-serif;
+    transform: translateY(100%);
+    color: #FFFFFF;
+    background-color: #FFFFFF00;
+    position: relative;
+    line-height: 100vh;
+    width: 100vw;
+    max-width: 100%;
+  }
 }
+
 .typed{
   color: #99C24D;
   position: relative;
@@ -134,17 +179,19 @@
   height: 80%;
   width: auto;
 }
-
+/* .about{
+  height:800px;
+  padding-top:100px;
+} */
 .about-holder{
+  height:800px;
+  padding-top:100px;
   background-image : linear-gradient(to bottom,
                   rgba(46,65,114,.8) 0%,
                   rgba(46,65,114,.7) 100%);
 
 }
-.about-title{
-  position: relative;
-  left: 6%;
-}
+
 /* .parallex-about{
   background-attachment: fixed;
   position: relative;
@@ -156,6 +203,7 @@
   object-fit: contain;
 } */
 .about{
+  font-family: 'Roboto', sans-serif;
   display:none;
   color:black;
   bottom:0;
@@ -267,7 +315,17 @@
   left: 50%;
 }
 button:focus {outline:0;}
-
+.aboutLink:link, .aboutLink:visited{
+  background-color: rgba(12,65,200,1);
+  color:white;
+  padding:10px 25px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+}
+.aboutLink:hover{
+  background-color: rgba(46,65,114,.8);
+}
 @keyframes appear {
   0%{
     opacity:0;
