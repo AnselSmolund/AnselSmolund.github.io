@@ -2,7 +2,8 @@ body {
   -webkit-user-select: none;  /* Chrome all / Safari all */
   -moz-user-select: none;     /* Firefox all */
   -ms-user-select: none;      /* IE 10+ */
-  user-select: none;          /* Likely future */
+  user-select: none;
+  font-family: 'Roboto', sans-serif;          /* Likely future */
 }
 #canvas-wrap{
   position: relative;
@@ -22,7 +23,7 @@ body {
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
-  height:100vh;
+  height:80vh;
 }
 
 .jumbotron{
@@ -46,7 +47,7 @@ body {
     font-weight: 900;
     letter-spacing: -4px;
     line-height: 80%;
-    font-size: 15vw;
+    font-size: 10vw;
 
   }
   .name{
@@ -91,7 +92,7 @@ body {
 }
 
 .typed{
-  color: #99C24D;
+  color:#F7E959;
   position: relative;
 
 }
@@ -167,6 +168,10 @@ body {
   background-color: #2E4172 !important;
   background-image: none;
   box-shadow:none;
+  transition: .8s ease-out;
+}
+.navbar:hover{
+  opacity:1 !important;
 }
 .navbar-light .navbar-toggler{
   border-color: transparent;
@@ -185,7 +190,7 @@ body {
 } */
 .about-holder{
 
-  padding-top:100px;
+
   background-image : linear-gradient(to bottom,
                   rgba(46,65,114,.8) 0%,
                   rgba(46,65,114,.7) 100%);
@@ -205,22 +210,49 @@ body {
 .about{
   font-family: 'Roboto', sans-serif;
   opacity: 0;
-  color:black;
-  bottom:0;
-  width:100%;
-  z-index: 1;
+
+  padding-top: 100px;
+}
+.circleImg{
+  border-radius: 50%;
+  height: 350px;
+  position: relative;
+  top: 50%;
+  transform: translateY(-50%);
+  float: right;
 }
 
-.education-holder{
-  background-image : linear-gradient(to bottom,
-                  rgba(46,65,114,.7) 0%,
-                  rgba(46,65,114,.6) 100%);
-  object-fit: contain;
+@media only screen and (max-width:990px){
+  .circleImg{
+    border-radius: 50%;
+    height: 300px;
+    position: relative;
+    margin: auto;
+    top:50%;
+    transform: translateY(-50%);
+
+
+  }
+}
+@media only screen and (min-width:990px){
+  .circleImg{
+    border-radius: 50%;
+    height: 350px;
+    position: relative;
+    top: 50%;
+    /* transform: translateY(-50%); */
+    float:right ;
+    align-self: auto;
+  }
+}
+img{
+  vertical-align: middle;
+  border-style: none;
 }
 
 .work-holder{
   background-image : linear-gradient(to bottom,
-                  rgba(46,65,114,.6) 0%,
+                  rgba(46,65,114,.7) 0%,
                   rgba(46,65,114,.5) 100%);
   object-fit: contain;
 }
@@ -314,17 +346,88 @@ body {
   left: 50%;
 }
 button:focus {outline:0;}
-.aboutLink:link, .aboutLink:visited{
-  background-color: rgba(12,65,200,1);
-  color:white;
-  padding:10px 25px;
+
+.aboutLink{
+  position: relative;
+  align-items: center;
+  padding: 8px 5px;
+  font-weight: 700;
+  font-size: 15px;
+  letter-spacing: 2px;
+  color: #383736;
+  border: 2px #383736 solid;
+  border-radius: 4px;
+  text-transform: uppercase;
+  outline: 0;
+  overflow:hidden;
+  background: none;
+  cursor: pointer;
+  transition:         0.08s ease-in;
+  -o-transition:      0.08s ease-in;
+  -ms-transition:     0.08s ease-in;
+  -moz-transition:    0.08s ease-in;
+  -webkit-transition: 0.08s ease-in;
+}
+.aboutLink:hover {
+  color: white;
+}
+.aboutLink:before{
+  content: "";
+  position: absolute;
+  background: #383736;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  top: 100%;
+  z-index: -1;
+  -webkit-transition: top 0.09s ease-in;
+}
+#headshot{
+  transform: translateX(-100%);
+}
+.skills-holder ul{
+  font-size: 14px;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+}
+.skills-holder h3{
+  font-size: 20px;
   text-align: center;
-  text-decoration: none;
-  display: inline-block;
+  outline: black;
+  font-weight: 900;
+  letter-spacing: 8px;
+  text-transform: uppercase;
+
 }
-.aboutLink:hover{
-  background-color: rgba(46,65,114,.8);
+.languages{
+  opacity: 0;
+  border-radius: 10%;
+  padding: 20px;
+  background-color: #a0c5cfA0;
 }
+.software-used{
+  opacity: 0;
+  border-radius: 10%;
+  padding: 20px;
+  background-color: #63cdd7A0;
+}
+.frameworks{
+  opacity: 0;
+  border-radius: 10%;
+  padding: 20px;
+  background-color: #0093b7A0;
+}
+.non-tech{
+  opacity: 0;
+  border-radius: 10%;
+  padding: 20px;
+  background-color: #005f89A0;
+}
+.aboutLink:hover:before{
+  top:0;
+  color:white;
+}
+
 @keyframes appear {
   0%{
     opacity:0;
