@@ -3,7 +3,11 @@ body {
   -moz-user-select: none;     /* Firefox all */
   -ms-user-select: none;      /* IE 10+ */
   user-select: none;
-  font-family: 'Roboto', sans-serif;          /* Likely future */
+  font-family: 'Roboto', sans-serif;
+  background-image : linear-gradient(to bottom,
+                  rgba(46,65,114,1) 0%,
+                  rgba(46,65,114,1) 20%,
+                  rgba(46,65,114,.4) 100%);       /* Likely future */
 }
 #canvas-wrap{
   position: relative;
@@ -14,10 +18,10 @@ body {
   left: 0;
 }
 .main-holder{
-  background-image : linear-gradient(to bottom,
+  /* background-image : linear-gradient(to bottom,
                   rgba(46,65,114,1) 0%,
                   rgba(46,65,114,1) 10%,
-                  rgba(46,65,114,.8) 100%);
+                  rgba(46,65,114,.8) 100%); */
   min-height: 500px;
   object-fit: contain;
   background-position: center;
@@ -188,14 +192,14 @@ body {
   height:800px;
   padding-top:100px;
 } */
-.about-holder{
+/* .about-holder{
 
 
   background-image : linear-gradient(to bottom,
                   rgba(46,65,114,.8) 0%,
                   rgba(46,65,114,.7) 100%);
 
-}
+} */
 
 /* .parallex-about{
   background-attachment: fixed;
@@ -222,35 +226,13 @@ body {
   float: right;
 }
 
-@media only screen and (max-width:990px){
-  .circleImg{
-    border-radius: 50%;
-    height: 300px;
-    position: relative;
-    margin: auto;
-    top:50%;
-    transform: translateY(-50%);
 
-
-  }
-}
-@media only screen and (min-width:990px){
-  .circleImg{
-    border-radius: 50%;
-    height: 350px;
-    position: relative;
-    top: 50%;
-    /* transform: translateY(-50%); */
-    float:right ;
-    align-self: auto;
-  }
-}
 img{
   vertical-align: middle;
   border-style: none;
 }
 
-.work-holder{
+/* .work-holder{
   background-image : linear-gradient(to bottom,
                   rgba(46,65,114,.7) 0%,
                   rgba(46,65,114,.5) 100%);
@@ -267,7 +249,7 @@ img{
                   rgba(46,65,114,.4) 0%,
                   rgba(46,65,114,.2) 100%);
   object-fit: contain;
-}
+} */
 #nav-icon3{
   width: 30px;
   height: 20px;
@@ -426,6 +408,10 @@ button:focus {outline:0;}
 .aboutLink:hover:before{
   top:0;
   color:white;
+}
+.project-holder h3{
+  text-align:center;
+  text-transform: uppercase;
 }
 
 @keyframes appear {

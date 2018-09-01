@@ -66,7 +66,7 @@
         <div class = "row">
           <div class = "col-lg-4 col-md-8">
             <div class = "about">
-              <img id = "headshot" class="center-block circleImg" src = "images/ansel2.jpg"></img>
+              <img id = "headshot" style = "border-radius: 50%" height = "350"class="img-fluid" src = "images/ansel2.jpg"></img>
 
             </div>
           </div>
@@ -182,27 +182,67 @@
   <div class = "work-holder">
     <div id = "work" class = "container-fluid" style = "padding-top:70px; padding-bottom:70px">
       <div class = "row">
-        <div class = "Work">
-          <h1 class = "display-3"><a name = "work"> WORK </a></h1>
+        <div class = "col-lg-12">
+          <div class = "skills-title">
+            <h1 style = "text-align: center;font-size: 40px; color: #9FB3FE"> Work Experience </h1><br><br>
+          </div>
         </div>
+
+
       </div>
+      <div class = "row">
+        <div class = "col">
+          <h3> Software Development Intern at Optum Tech </h3>
+          <br>
+          <ul>
+            <li>Worked on a scrum team of seven to develop a mobile application for the IT
+              Service Management platform ServiceNow with an end user base of over 14,000 employees
+            </li>
+            <li>Defined objectives and uncovered defects through synthesizing beta test
+              feedback from stakeholder engagement
+            </li>
+            <li>Enhanced efficiency in the processing, handling and resolving of IT issues enterprise-wide
+            </li>
+            <li>
+              Developed an API to seamlessly connect Optum Chatbot with ServiceNow
+            </li>
+          </ul>
+        </div>
+        <div class = "col">
+          <img class = "img-fluid" src = "images/optum.png"></img>
+      </div>
+
     </div>
   </div>
   <div class = "project-holder">
     <div id = "projects" class = "container-fluid" style = "padding-top:70px; padding-bottom:70px">
       <div class = "row">
-        <div class = "Projects">
-          <h1 class = "display-3"><a name = "projects"> PROJECTS </a></h1>
+        <div class = "col-3">
+          <div class = "colormaze">
+            <h3><a href = "https://anselsmolund.github.io/ColorMaze-/">Color maze</a></h3>
+            <img class = "img-fluid" src = "images/cm.png"></img>
+          </div>
+        </div>
+        <div class = "col-3">
+          <h3><a href = "https://chrome.google.com/webstore/detail/todo-list/dabcobbkdfbpepadeilkdlpbccpigmai" target = "_blank"> Todo List </a></h3>
+          <img class = "img-fluid" src = "images/todo.png"></img>
+        </div>
+        <div class = "col-3">
+          <h3> ServiceNow Mobile App for Optum </h3>
+          <img class = "img-fluid" src = "images/sn.jpg"></img>
+        </div>
+        <div class = "col-3">
+          <h3> this website </h3>
+          <img class = "img-fluid" src = "images/anselsite.png"></img>
+
         </div>
       </div>
     </div>
   </div>
   <div class = "contact-holder">
-    <div id = "contact" class = "container-fluid" style = "padding-top:70px; padding-bottom:70px">
+    <div id = "contact" class = "container" style = "padding-top:70px; padding-bottom:70px">
       <div class = "row">
-        <div class = "Contact">
-          <h1 class = "display-3"><a name = "contact"> CONTACT ME</a> </h1>
-        </div>
+
       </div>
     </div>
   </div>
@@ -218,6 +258,7 @@
   <script src = "typed.js"></script>
   <script> $('body').scrollspy({target:'#navbarSupportedContent',offset:108})</script>
   <script src = "js/smooth-scroll.js"></script>
+  <script type="text/javascript" defer src="http://www.123formbuilder.com/embed/4135251.js" data-role="form" data-default-width="650px"></script><!-- www.123formbuilder.com script ends here -->
   <!-- <script src = "js/canvas.js"></script> -->
   <script>
     var scroll = new SmoothScroll('a[href*="#"]');
